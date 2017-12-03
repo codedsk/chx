@@ -157,3 +157,13 @@ class Text(Widget):
         e = self.wait_until_present()
         e.send_keys(val)
 
+
+class TextReadOnly(Widget):
+    """represents readonly text in elements like divs
+    """
+
+    @property
+    def value(self):
+        e = self.wait_until_present()
+        return e.text
+
